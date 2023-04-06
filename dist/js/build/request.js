@@ -19,7 +19,7 @@ var ajRequest = (function () {
             return false;
         }
 
-        chrome.extension.sendMessage({url: config.getApiUrl(url), data:data},function(result) {
+        chrome.runtime.sendMessage({url: config.getApiUrl(url), data:data},function(result) {
             if(!base.isEmptyValue(result)) {
                 success(result);
             } else {

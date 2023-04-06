@@ -1,15 +1,12 @@
 {
-  "name": "yunqian",
+  "name": "Comic++",
   "version": "1.0.0",
-  "description": "灯网ERP",
+  "description": "重新定义漫画与小说网站的样式布局，改变你的阅读方式。",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "http://lyy@14.215.245.146:7888/r/erp_pc_web.git"
-  },
+
   "author": "keepsilent",
   "license": "ISC",
   "devDependencies": {
@@ -25,8 +22,5 @@
     "gulp-uglify": "^3.0.0",
     "tmodjs": "^1.0.4"
   },
-  "dependencies": {},
-  "keywords": [
-    "yunqian"
-  ]
+  "dependencies": {}
 }

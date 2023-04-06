@@ -1,31 +1,37 @@
 {
-  "name": "抵到烂",
-  "version": "0.1.0",
-  "description": "一个极简的新标签页,内提供时间、日期、搜索和网站图标等功能，自由组合创建属于自己的空白页。",
+  "name": "Comic++",
+  "version": "2.0.0",
+  "description": "重新定义漫画与小说网站的样式布局，改变你的阅读方式。",
   "icons": {
     "16": "dist/images/icon.png",
     "48": "dist/images/icon.png",
     "128": "dist/images/icon.png"
   },
-  "browser_action": {
-    "default_title": "抵到烂",
+  "action": {
+    "default_title": "Comic++",
     "default_icon": "dist/images/icon.png",
     "default_popup": "popup.html"
   },
-  "background": {
-    "page":"background.html"
-  },
-  "permissions" : [
-    "webRequest",
-    "webRequestBlocking",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
     "http://*/*",
     "https://*/*"
   ],
-  "content_security_policy": "script-src 'self' http://127.0.0.1; object-src 'self'",//域名加入白名单
+  "background": {
+    "service_worker":"background.js"
+  },
+  "homepage_url": "http://www.didaolan.cn",
   "content_scripts":[{
-    "matches": ["<all_urls>"],
-    "js":["dist/js/lib/zepto.min.js","dist/js/template.js","dist/js/app.js"],
-    "run_at": "document_end"
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "css":["dist/css/style.css"],
+    "js":["dist/js/lib/jquery.min.js","dist/js/template.js","dist/js/app.js"],
+    "run_at": "document_start"
   }],
-  "manifest_version": 2
+  "manifest_version": 3
 }
