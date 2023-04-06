@@ -1,0 +1,16 @@
+<div class="ddl-comic-favor">
+    <p class="ddl-comic-favor-head">今天有<i id="ddl-comic-updated-num">0本</i>漫画更新。<span class="iconfont icon-bianjishujia fr" id="ddl-favor-opera-btn" data-status="normal"></span></p>
+    <ul class="ddl-scrollbar">
+        {{each list as item}}
+            <li class="item-box" data-url="{{item.home}}">
+                <h3 class="title">{{item.title | setTitle}}</h3>
+                <p class="from">{{item.current.time | getTimeAgo}} {{item.type,'title' | getSiteField}} {{item.current.type != '正文卷'? item.current.type: ''}}</p>
+                <p class="updated" style="{{ (item.updated == true) ? 'color: #ffc459;': ''}}">更新至: {{item.last.title,item.title | resetChapterName}}</p>
+                <span class="continue-btn" data-url="{{item.current.url}}">继续阅读</span>
+                <span class="delete-btn" data-url="{{item.home}}">移除</span>
+                <!--<img class="cover" src="{{item.cover ? item.cover: './dist/images/default_cover.png' }}" width="70">-->
+                <img class="cover" src="./dist/images/default_cover.png" data-src="{{item.cover}}" width="70">
+            </li>
+        {{/each}}
+    </ul>
+</div>

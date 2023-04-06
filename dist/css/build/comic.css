@@ -1,0 +1,101 @@
+#ddl-comic-wrap { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #FFF; z-index: 9999998;}
+#ddl-comic-wrap div.ddl-comic-inner { width: 100%; height: 100%; background: #edecea;  }
+
+#ddl-comic-wrap div.ddl-comic-main { padding-top: 75px; height: 937px; overflow-y: auto; box-sizing: initial; }
+#ddl-comic-wrap div.ddl-comic-main img { display: block; width: 100%; height: auto; margin: 0 auto; }
+
+#ddl-comic-wrap div.ddl-comic-top { position: fixed; top: 0; left: 0; padding: 10px 0; margin-left: -17px;  background: #FFF; z-index: 3; width: 100%; }
+#ddl-comic-wrap div.ddl-comic-top div.ddl-comic-logo { margin-left: 2%; color: #ccc; font-size: 32px; font-weight: bolder; line-height: 1; }
+#ddl-comic-wrap div.ddl-comic-top div.ddl-comic-logo span { color: rgba(255,165,0,0.65) }
+#ddl-comic-wrap div.ddl-comic-top div.ddl-comic-title { position: absolute; top: 13px; left: 0px; width: 100%; height: auto; line-height: 28px; color: #666; font-size: 18px; text-align: center; }
+#ddl-comic-wrap div.ddl-comic-top div.ddl-comic-title span#ddl-comic-title { cursor: pointer; }
+#ddl-comic-wrap div.ddl-comic-top div.ddl-comic-title span#ddl-comic-title:hover { color: rgba(255, 165, 0, 0.65); }
+
+
+#ddl-comic-wrap div.ddl-comic-top span#ddl-comic-exit-btn { position: absolute; top: 7px; right: 1%; padding: 0 6px; color: rgba(0,0,0,0.35); font-size: 26px; line-height: 42px; cursor: pointer; }
+#ddl-comic-wrap div.ddl-comic-top span#ddl-comic-exit-btn:hover { color: rgba(0,0,0,0.55);  }
+
+#ddl-comic-wrap div.ddl-comic-bottom { padding: 25px 0; }
+#ddl-comic-wrap div.ddl-comic-bottom p { display: none; color: #666;  font-size: 18px; text-align: center; }
+#ddl-comic-wrap div.ddl-comic-bottom p span {  border: solid 1px #666; border-radius: 100%; padding: 5px; font-size: 14px; font-weight: bold;  margin-left: 10px;}
+#ddl-comic-wrap div.ddl-comic-bottom p a,
+#ddl-comic-wrap div.ddl-comic-bottom p a:hover,
+#ddl-comic-wrap div.ddl-comic-bottom p a:active,
+#ddl-comic-wrap div.ddl-comic-bottom p a:visited { color: #666; }
+
+#ddl-comic-main div.ddl-comic-image-box { position: relative; width: 800px; height: 900px; margin: 0 auto; margin-bottom: 20px; background: #F5f5f5; box-shadow: 1px 2px 10px rgba(0, 0, 0, .15); }
+#ddl-comic-main div.ddl-comic-image-box div.ddl-comic-image-main { position: relative;  font-size: 0; z-index: 2; }
+#ddl-comic-main div.ddl-comic-image-box div.ddl-comic-image-main { width: 100%; height: auto; }
+
+#ddl-comic-main div.ddl-logo { position: absolute; bottom: 5%; left: 50%; margin-left: -134px; color: #CCC;  font-size: 60px;  -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; z-index: 1;  }
+
+#ddl-comic-menu { display: none; position: fixed; bottom: 2.5%; right: 2.5%; z-index: 9999999; }
+#ddl-comic-menu ul { list-style: none; }
+#ddl-comic-menu ul li { position: relative; margin-bottom: 10px; padding: 4px; border: solid 1px rgba(255,255,255,0.45); border-radius: 100%; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); }
+#ddl-comic-menu ul li.hide { display: none; }
+#ddl-comic-menu ul li span.iconfont { display: block; width: 48px; height: 48px; line-height: 48px; color: rgba(0,0,0,0.35); font-size: 24px; text-align: center; background: rgba(255,255,255,0.75); border-radius: 100%; }
+#ddl-comic-menu ul li span.iconfont { cursor: pointer; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.01); }
+
+#ddl-comic-menu ul li span.icon-shezhi{ line-height: 52px; }
+#ddl-comic-menu ul li.active,
+#ddl-comic-menu ul li:hover { border-color: rgba(255,165,0,0.15); }
+#ddl-comic-menu ul li.active span.iconfont,
+#ddl-comic-menu ul li:hover span.iconfont { color: #FFF; background: rgba(255,165,0,0.65); }
+
+#ddl-comic-launch { position: fixed; right: 2%; top: 3%; z-index: 9999999; }
+#ddl-comic-launch { border: solid 6px rgba(255,165,0,0.1); border-radius: 100%; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); }
+#ddl-comic-launch:hover { border: solid 6px rgba(255,165,0,0.15); }
+#ddl-comic-launch span { display: block; width: 48px; height: 48px; line-height: 48px; color: rgba(255,255,255,0.75); font-size: 24px; text-align: center; background: rgba(255,165,0,0.65); cursor: pointer; border-radius: 100%; }
+#ddl-comic-launch span:hover { color: rgba(255,255,255,1); font-size: 24px; text-align: center; background: rgba(255,165,0,0.85); }
+
+.ddl-comic-catalog { display: none; position: absolute; right: 88px; bottom: -70px; width: 235px; height: 580px;  background: rgba(255,255,255,0.9); box-shadow: 1px 2px 10px rgba(0, 0, 0, .25); border-radius: 2px; overflow: hidden; z-index: 1; }
+.ddl-comic-catalog { -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; }
+.ddl-comic-catalog h3 { position: relative;  margin: 0; padding: 10px;  color: rgba(0,0,0,0.55);  font-size: 14px; font-weight: normal; line-height: 1.5; }
+.ddl-comic-catalog h3 i { position: absolute; left: 10px; bottom: 0px; border: solid 7px transparent; border-bottom-color: rgba(0,0,0,0.03); }
+.ddl-comic-catalog-main-wrap { padding: 6px 0; background: rgba(0,0,0,0.03); }
+.ddl-comic-catalog-main { height: 509px;overflow-y: auto;  }
+.ddl-comic-catalog-main span { position: relative;  display: block;  padding-left: 0px; padding-right: 10px;  height: 32px; color: rgba(0,0,0,0.55); font-size: 14px;  line-height: 32px; text-decoration: none; overflow: hidden; cursor: pointer; text-overflow:ellipsis;  white-space: nowrap;  }
+.ddl-comic-catalog-main span.active { color: rgba(255,165,0,0.65); }
+.ddl-comic-catalog-main span:hover { color: #FFF; background: rgba(255,165,0,0.65); text-decoration: none;   }
+.ddl-comic-catalog-main span i { position: absolute; left: 10px; top: 0; margin-right: 30px; font-style: normal;}
+
+.ddl-comic-catalog p { position: relative; margin: 0; padding: 10px 10px 10px;  color: rgba(0,0,0,0.55);  font-size: 14px; font-weight: normal;  }
+.ddl-comic-catalog p em { float: right; font-style: normal; cursor: pointer;  }
+.ddl-comic-catalog p i.ddl-icon-up {  position: absolute; right: 10px; top: 0px; border: solid 7px transparent; border-top-color: rgba(0,0,0,0.03); }
+.ddl-comic-catalog p i.num { margin:  0 1px; font-style: normal;}
+
+.ddl-comic-right-icon { display: none; position: absolute; right: 68px; bottom: 18px; border: solid 10px transparent; border-left-color:  rgba(255,255,255,0.9); z-index: 2; }
+
+#ddl-comic-page { position: fixed; left: 2%; bottom:2%; color: #ccc; font-size: 30px;  }
+#ddl-comic-page span:first-child { color: #aaa; font-size: 36px; }
+#ddl-comic-page em { margin:  0 2px; font-style: normal;}
+
+
+#ddl-comic-wrap div.ddl-close-light-inner { background: rgba(0,0,0,0.65); }
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-top { background: rgba(0,0,0,0.65); }
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-top div.ddl-comic-title { color: rgba(255,255,255,0.85);  line-height: 26px; }
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-top div.ddl-comic-logo { color: rgba(255,255,255,0.85); }
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-top div.ddl-comic-logo span { color: rgba(255,165,0,0.85);}
+
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-top span#ddl-comic-exit-btn { color: rgba(255,255,255,0.75); line-height: 40px; }
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-top span#ddl-comic-exit-btn:hover { color: rgba(255,255,255,0.95); }
+
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-bottom p { display: none; }
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-bottom p,
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-bottom p a,
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-bottom p a:hover,
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-bottom p a:active,
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-bottom p a:visited { color: rgba(255,255,255,0.85); }
+#ddl-comic-wrap div.ddl-close-light-inner div.ddl-comic-bottom p span {  border: solid 1px rgba(255,255,255,0.85); }
+#ddl-comic-wrap div.ddl-close-light-inner div#ddl-comic-page span:first-child { color: #ddd; }
+
+#ddl-comic-menu ul li { position: relative; margin-bottom: 10px; padding: 4px; border: solid 1px rgba(255,255,255,0.45); border-radius: 100%; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); }
+#ddl-comic-menu ul li.hide { display: none; }
+#ddl-comic-menu ul li span.iconfont { display: block; width: 48px; height: 48px; line-height: 48px; color: rgba(0,0,0,0.35); font-size: 24px; text-align: center; background: rgba(255,255,255,0.85); border-radius: 100%; }
+#ddl-comic-menu ul li span.iconfont { cursor: pointer; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.01); }
+
+#ddl-comic-menu ul.ddl-close-light-inner li.ddl-comic-menu-btn span.icon-shezhi{ line-height: 52px; }
+#ddl-comic-menu ul.ddl-close-light-inner li.active,
+#ddl-comic-menu ul.ddl-close-light-inner li.ddl-comic-menu-btn:hover { border-color: rgba(255,165,0,0.15); }
+#ddl-comic-menu ul.ddl-close-light-inner li.active span.iconfont,
+#ddl-comic-menu ul.ddl-close-light-inner li.ddl-comic-menu-btn:hover span.iconfont { color: #FFF; background: rgba(255,165,0,0.85); }

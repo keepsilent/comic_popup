@@ -1,0 +1,18 @@
+<div class="ddl-comic-site">
+    <div class="ddl-comic-site-head">
+        <span class="ddl-comic-site-tab active" data-type="all">全部</span>
+        <span class="ddl-comic-site-tab" data-type="comic">漫画</span>
+        <span class="ddl-comic-site-tab" data-type="novel">小说</span>
+    </div>
+    <ul class="ddl-scrollbar">
+        {{each list as item,index}}
+            {{if item.type != 'ignore'}}
+                <li class="ddl-comic-site-jump" data-url="{{item.url}}">
+                    <h3 class="title">{{item.title}}</h3>
+                    <p class="from">{{item.describe}}</p>
+                    <div class="cover" style="background-image:url('./dist/images/site/{{index}}.png'); {{index | setBackgroundAuto}}"></div>
+                </li>
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>

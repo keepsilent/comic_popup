@@ -1,0 +1,27 @@
+{{each list as items}}
+    <div class="ddl-comic-search-item-box">
+        <h3><a href="{{items.link}}" target="_blank">{{items.title}} {{items.catalog.title != '正文卷'? '- '+items.catalog.title : ''}}</a></h3>
+        <div>
+            <p>
+                <span>作者: </span><a href="javascript:void(0);" class="search-author-btn">{{items.author || '--'}}</a>
+                <span class="ml-15">更新至: </span><a href="{{items.last.link}}" target="_blank">{{items.last.title}}</a>
+            </p>
+            <p>
+                <span>状态: </span><a href="{{items.link}}" target="_blank">{{items.status}}</a>
+                <span class="ml-15">来源: </span><a href="{{items.type,'url' | getSiteField}}" target="_blank">{{items.type,'title' | getSiteField}}</a>
+            </p>
+            <p class="intro">{{items.intro}}</p>
+            <p class="catalog">
+                {{each items.catalog.list as item}}
+                    <a href="{{item.link}}" target="_blank">{{item.title}}</a>
+                {{/each}}
+
+                {{if items.total > 16}}
+                    <a class="unfold-btn" href="javascript:void(0);">展开+</a>
+                    <a class="fewer-btn" href="javascript:void(0);">收起-</a>
+                {{/if}}
+            </p>
+            <a href="{{items.link}}" target="_blank" style="font-size: 0;"><img src="./dist/images/default_cover.png" data-src="{{items.cover}}" class="cover"  width="141" height="187"></a>
+        </div>
+    </div>
+{{/each}}

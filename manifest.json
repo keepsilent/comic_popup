@@ -1,0 +1,31 @@
+{
+  "name": "抵到烂",
+  "version": "0.1.0",
+  "description": "一个极简的新标签页,内提供时间、日期、搜索和网站图标等功能，自由组合创建属于自己的空白页。",
+  "icons": {
+    "16": "dist/images/icon.png",
+    "48": "dist/images/icon.png",
+    "128": "dist/images/icon.png"
+  },
+  "browser_action": {
+    "default_title": "抵到烂",
+    "default_icon": "dist/images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page":"background.html"
+  },
+  "permissions" : [
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' http://127.0.0.1; object-src 'self'",//域名加入白名单
+  "content_scripts":[{
+    "matches": ["<all_urls>"],
+    "js":["dist/js/lib/zepto.min.js","dist/js/template.js","dist/js/app.js"],
+    "run_at": "document_end"
+  }],
+  "manifest_version": 2
+}
